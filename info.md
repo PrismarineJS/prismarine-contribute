@@ -1,21 +1,23 @@
-PrismarineJS is a Github organization that hosts a number of Minecraft-related projects written for Node.js. The projects include:
-* mineflayer - a high-level library for creating Minecraft Java Edition bots
-* node-minecraft-protocol (npm: minecraft-protocol) - a protocol library that developers can use to create their own Minecraft clients or servers. node-minecraft-protocol (nmp) isn't designed for casual use as it requires a deep understanding of the Minecraft protocol and alot of boilerplate code to work with.
-* bedrock-protocol - a protocol library for Minecraft Bedrock Edition, with same caveats as nmp
-* node-minecraft-data (npm: minecraft-data) - a Node.js library that exposes data that exists inside the langauge-agnostic PrismarineJS/minecraft-data repo. node-minecraft-data is known as minecraft-data on the npm registry. The minecraft-data repo holds JSON files describing Minecraft items, blocks, recipes, entities, the schema for Minecraft Java and Bedrock Edition packets, and more
-* prismarine-nbt - a library for reading and writing Minecraft NBT data
-* prismarine-biome - a small library for reading and writing Minecraft biome data
-* prismarine-block - a library for working with Minecraft block data. prismarine-block exposes a Block class that can hold instances of block data
-* prismarine-chat - a library for parsing and serializing Minecraft chat messages
-* prismarine-chunk - a library for reading and writing Minecraft chunk data
-* prismarine-entity - a small library that holds an Entity class for working with Minecraft entities
-* prismarine-item - a library for working with Minecraft item data. prismarine-item exposes an Item class that can hold instances of item data
-* prismarine-nbt - a library for reading and writing Minecraft NBT data
-* prismarine-physics - a library for working with Minecraft physics
-* prismarine-recipe - a small library for working with Minecraft recipes
-* prismarine-registry - a library that can be used to create an "instance" of minecraft-data for a specific version of Minecraft. This is helpful when the data needs to be mutated in some way for a specific session
-* prismarine-windows - a library for working with Minecraft inventories
-* prismarine-world - a library that holds a World class for working with Minecraft worlds
+PrismarineJS is a Github organization that hosts many Minecraft-related projects written in JavaScript for use in Node.js apps.
+
+The projects include the following Node.js libraries:
+| Repo & NPM package name | Description and Purpose |
+|-|-|
+| mineflayer              | High-level Node.js library for creating Minecraft Java Edition bots
+| node-minecraft-data (npm: minecraft-data) | Exposes data inside the language-agnostic PrismarineJS/minecraft-data repo
+| prismarine-nbt          | Exposes methods to convert binary NBT data to JavaScript objects and vice versa
+| prismarine-biome        | Exposes Biome class that can be instantiated to query biome information such as temperature
+| prismarine-block        | Exposes Block class to represent a block in the world. Can be used to query information such as block break time.
+| prismarine-item         | Exposes Item class to represent a Minecraft item. Can be used to query information such as item name
+| prismarine-chat         | Exposes ChatMessage class to parse and serialize Minecraft chat messages
+| prismarine-chunk        | Exposes ChunkColumn class to hold and query Minecraft chunk data, like when obtaining a block in world at a position. Holds methods to serialize and deserialize chunk data from and to binary for reading and writing network and disk Minecraft chunk data.
+Reading and writing Minecraft chunk data
+| prismarine-world        | Exposes World class to represent a Minecraft world. Can be used to raycast and query block information
+| prismarine-windows      | Exposes Window class to represent a Minecraft inventory. Can be used to query information such as window title
+| prismarine-entity       | Exposes Entity class to represent a Minecraft entity. Can be used to query information such as entity type
+| prismarine-physics      | Exposes methods to simulate Minecraft physics
+| prismarine-recipe       | Exposes methods to query Minecraft recipes
+| prismarine-registry     | Creating an "instance" of minecraft-data for a specific version of Minecraft. This is helpful when the data needs to be mutated in some way for a specific session
 
 Almost all the PrismarineJS packages support multi-versioning, meaning they are capable of supporting a wide range of Minecraft versions.
 mineflayer and node-minecraft-protocol currently support all Minecraft Java Edition versions beyond 1.8.
@@ -30,4 +32,4 @@ Here are some explainations about the dependencies:
   * mineflayer-pathfinder - a mineflayer plugin for A* pathfinding
 * node-minecraft-protocol - Node-minecraft-protocol depends primarily on the `protodef` and `minecraft-data` packages. minecraft-data mainly to access protocol schemas
 * bedrock-protocol - Bedrock-protocol similarly depends on the `protodef` package and `minecraft-data`
-* node-minecraft-data - https://github.com/prismarinejs/node-minecraft-data has a submodule that points to the language-agnostic `PrismarineJS/minecraft-data` repo
+* node-minecraft-data - github.com/prismarinejs/node-minecraft-data has a submodule that points to the language-agnostic github.com/prismarinejs/minecraft-data repo
