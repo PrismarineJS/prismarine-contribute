@@ -29,8 +29,7 @@ Key points:
 * minecraft-data holds data for various Minecraft Java and Bedrock Edition versions, even if they're not supported by other PrismarineJS projects
 
 Dependency information:
-* mineflayer - Mineflayer depends on the `mineflayer-pathfinder, prismarine-chat, prismarine-windows, prismarine-registry, prismarine-physics, prismarine-recipe, prismarine-registry, prismarine-world, prismarine-entity, prismarine-item, prismarine-nbt, prismarine-block, prismarine-chunk, prismarine-biome, minecraft-data, node-minecraft-protocol, protodef, vec3` packages. Mineflayer's API can be extended by creating plugins that use these packages. Notably, this includes:
+* node-minecraft-data - Is a repo at github.com/prismarinejs/node-minecraft-data which contains a submodule that points to the language-agnostic github.com/prismarinejs/minecraft-data repo
+* mineflayer - Mineflayer depends on many of the prismarine-* packages above. Mineflayer's API can be extended by creating plugins that additional methods to a bot instance. Notably, this includes:
   * mineflayer-pathfinder - a mineflayer plugin for A* pathfinding
-* node-minecraft-protocol - Node-minecraft-protocol depends primarily on the `protodef` and `minecraft-data` packages. minecraft-data mainly to access protocol schemas
-* bedrock-protocol - Bedrock-protocol similarly depends on the `protodef` package and `minecraft-data`
-* node-minecraft-data - github.com/prismarinejs/node-minecraft-data has a submodule that points to the language-agnostic github.com/prismarinejs/minecraft-data repo
+* node-minecraft-protocol and bedrock-protocol depend on `minecraft-data` for protocol schemas and other data. They then feed the protocol schemas to `protodef` to handle serialization logic.
