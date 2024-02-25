@@ -5,7 +5,6 @@ The projects include the following Node.js libraries:
 |-|-|
 | mineflayer                | Ceating Minecraft Java Edition bots
 | node-minecraft-data (npm: minecraft-data) | Exposes data inside the language-agnostic PrismarineJS/minecraft-data repo
-| prismarine-nbt            | Exposes methods to convert binary NBT data to JavaScript objects and vice versa
 | prismarine-biome          | Exposes Biome class that can be instantiated to query biome information such as temperature
 | prismarine-block          | Exposes Block class to represent a block in the world. Can be used to query information such as block break time.
 | prismarine-item           | Exposes Item class to represent a Minecraft item. Can be used to query information such as item name
@@ -14,13 +13,14 @@ The projects include the following Node.js libraries:
 | prismarine-world          | Exposes World class to represent a Minecraft world. Can be used to raycast and query block information
 | prismarine-windows        | Exposes Window class to represent a Minecraft inventory. Can be used to query information such as window title
 | prismarine-entity         | Exposes Entity class to represent a Minecraft entity. Can be used to query information such as entity type
-| prismarine-physics        | Exposes methods to simulate Minecraft physics
-| prismarine-recipe         | Exposes methods to query Minecraft recipes
+| prismarine-nbt            | Convert binary NBT data to JavaScript objects and vice versa
+| prismarine-physics        | Simulate Minecraft physics
+| prismarine-recipe         | Query Minecraft recipes
 | prismarine-registry       | Creating an "instance" of minecraft-data for a specific version of Minecraft. This is helpful when the data needs to be mutated in some way for a specific session
+| vec3                      | Vector3 class for 3D vector operations
 
 And some non-PrismarineJS projects, but relevant to PrismarineJS:
 * protodef - a Node.js library for binary protocol serialization/de-serialization that is used by nmp and bedrock-protocol. ProtoDef's compiler can take in a JSON schema for a binary protocol and use that to generate JavaScript code to serialize and deserialize the protocol packets
-* vec3 - a small Node.js library for working with 3D vectors
 
 Key points:
 * Almost all the PrismarineJS projects support multi-versioning, meaning they are support a wide range of Minecraft versions.
